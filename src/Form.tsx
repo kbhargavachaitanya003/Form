@@ -4,7 +4,7 @@ import { FormControl, Button, RadioGroup, FormControlLabel, Radio, FormGroup, Te
 import { useForm, SubmitHandler } from "react-hook-form";
 import { FormData } from './types';
 import { useFormStore } from './FormStore';
-import './test.css';
+import './Form.css';
 
 const Form: React.FC = () => {
   const { register, handleSubmit, formState} = useForm<FormData>(); 
@@ -25,7 +25,7 @@ const Form: React.FC = () => {
           <TextField
             type='text'
             id='outlined-basic'
-            label={errors.name?.message || 'Name'}
+            label={errors.name?.message || 'Name*'}
             {...register('name', { required:{
               value: true,
               message: "Name is required" }})}
@@ -34,7 +34,7 @@ const Form: React.FC = () => {
           <TextField
             type='email'
             id='outlined-basic'
-            label={errors.email?.message || 'Email'}
+            label={errors.email?.message || 'Email*'}
             {...register('email', { required:
               "Email is required",
               pattern: {
@@ -47,7 +47,7 @@ const Form: React.FC = () => {
           <TextField
             type='tel'
             id='outlined-basic'
-            label={errors.phone?.message || 'Mobile Number'}
+            label={errors.phone?.message || 'Mobile Number*'}
             {...register('phone', { required:
               "Mobile Number is required",
               pattern: {

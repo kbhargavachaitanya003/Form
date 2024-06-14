@@ -1,10 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FormControl, Button, RadioGroup, FormControlLabel, Radio, FormGroup, TextField, FormLabel } from '@mui/material';
+import { FormControl, Button, RadioGroup, FormControlLabel, Radio, FormGroup, TextField } from '@mui/material';
 import { useForm, SubmitHandler } from "react-hook-form";
-import { FormData } from './types';
-import { useFormStore } from './FormStore';
-import './Form.css';
+import { FormData } from '../Components/types';
+import { useFormStore } from '../Store/FormStore';
+import '../Styles/Form.css';
 
 const Form: React.FC = () => {
   const { register, handleSubmit, formState} = useForm<FormData>(); 

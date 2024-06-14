@@ -1,5 +1,5 @@
 import { create } from "zustand"
-import { FormData } from "./types"
+import { FormData } from "../Components/types"
 interface FormStore {
     formData: FormData | null;
     setFormData: (data: FormData) => void;

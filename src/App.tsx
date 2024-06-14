@@ -2,8 +2,8 @@ import React from 'react';
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
-import Form from './Form';
-import Details from './details';
+import Form from './Routes/Form';
+import Details from './Routes/details';
 
 function App() {
   return (
